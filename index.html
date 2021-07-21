@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Build a Survey Form</title>
+  </head>
+  <body>
+    <header class="[ header ] [ first-border block-padding ]">
+      <img src="LOGO.png" alt="Logo da Fantastic" width="150" />
+      <h1 id="title">Dev After&nbsp;30 Newsletter</h1>
+    </header>
+
+    <section id="description" class="[ border block-padding flow ]">
+      <p>
+        <strong>Hello, World!</strong> My name is Pablo Marques. I am a 32 year
+        old Brazilian who wants to change careers and be a professional
+        developer. Subscribe to my newsletter to follow the challenges I face
+        and the lessons I learn as I pursue my goal.
+      </p>
+      <p>
+        BTW, this was supposed to be a survey form, but I thought "Why not?" and
+        made this a subscription form for my newsletter. Sorry not sorry!
+      </p>
+      <p>
+        BTW2, the design of this page is inspired by the survey forms they do in
+        Word, you know? That's why this is so ugly. Nothing to do with my
+        qualifications as a designer, true story🙄...
+      </p>
+    </section>
+
+    <form
+      id="survey-form"
+      action="https://tinyletter.com/pahbloo"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://tinyletter.com/pahbloo', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+    >
+      <section id="personal-data" class="[ border block-padding flow ]">
+        <p class="[ form-line ]">
+          <label id="name-label" for="name"> Name: </label>
+          <input id="name" placeholder="João da Silva" required />
+        </p>
+
+        <p class="[ form-line ]">
+          <label id="email-label" for="email"> Email: </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="joao@example.com"
+            required
+          />
+          <input type="hidden" value="1" name="embed" />
+        </p>
+
+        <div class="[ form-line ]" data-state="multi-forms">
+          <p>
+            <label for="dropdown">Language:</label>
+            <select id="dropdown" class="flex-grow" required>
+              <option value="" disabled selected hidden>Select</option>
+              <option value="English">English</option>
+              <option value="Portuguese">Portuguese</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+
+          <p>
+            <label id="number-label" for="number"> Age: </label>
+            <input
+              id="number"
+              class="flex-grow"
+              type="number"
+              min="13"
+              max="150"
+              placeholder="42"
+              size="3"
+            />
+          </p>
+
+          <p>
+            <label>Genre:</label>
+            <label for="F">
+              <input id="F" type="radio" name="radio" value="F" />
+              Female
+            </label>
+            <label for="M">
+              <input id="M" type="radio" name="radio" value="M" /> Male
+            </label>
+            <label for="Other">
+              <input id="Other" type="radio" name="radio" value="Other" />
+              Other
+            </label>
+          </p>
+        </div>
+      </section>
+
+      <section id="check-emojis" class="[ border block-padding flow ]">
+        <p>Select below your favorite emoji:</p>
+        <label for="emoji1">
+          <input type="checkbox" name="emojis" id="emoji1" value="1" />
+          😋
+        </label>
+        <label for="emoji2">
+          <input type="checkbox" name="emojis" id="emoji2" value="2" />
+          👍
+        </label>
+        <label for="emoji3">
+          <input type="checkbox" name="emojis" id="emoji3" value="3" />
+          😎
+        </label>
+        <label for="emoji4">
+          <input type="checkbox" name="emojis" id="emoji4" value="4" />
+          😆
+        </label>
+        <label for="emoji5">
+          <input type="checkbox" name="emojis" id="emoji5" value="5" />
+          😀
+        </label>
+        <label for="emoji6">
+          <input type="checkbox" name="emojis" id="emoji6" value="6" />
+          😍
+        </label>
+        <label for="emoji7">
+          <input type="checkbox" name="emojis" id="emoji7" value="7" />
+          🤣
+        </label>
+        <label for="emoji8">
+          <input type="checkbox" name="emojis" id="emoji8" value="8" />
+          😂
+        </label>
+        <label for="emoji9">
+          <input type="checkbox" name="emojis" id="emoji9" value="9" />
+          💩
+        </label>
+        <label for="emoji10">
+          <input type="checkbox" name="emojis" id="emoji10" value="10" />
+          🤔
+        </label>
+      </section>
+      <section id="textarea" class="[ border block-padding flow ]">
+        <label for="suggestions">
+          <p>Notes and suggestions:</p>
+          <textarea
+            name="suggestions"
+            id="suggestions"
+            cols="30"
+            rows="5"
+            placeholder="Write it down here..."
+          ></textarea>
+        </label>
+      </section>
+      <input
+        type="submit"
+        value="Subscribe"
+        id="submit"
+        class="block-padding"
+      />
+    </form>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script>
+      const projectName = "survey-form";
+    </script>
+  </body>
+</html>
